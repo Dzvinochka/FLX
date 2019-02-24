@@ -1,0 +1,82 @@
+ #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    margin: 30px;
+    text-align: center;
+    font-weight: 200;
+  }
+  #textForm {
+    width: 80vw;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-color: black;
+  }
+  #list {
+    list-style-type: none;
+    user-select: none;
+  }
+  .material-icons {
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .actions {
+    border-top: 2px solid #000;
+    width: 84vw;
+  }
+  li {
+    cursor: move;
+    width: 81vw;
+    max-width: 81vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .unchecked {
+    align-self: flex-start;
+  }
+  .close {
+    align-self: flex-end;
+  }
+  span {
+    display: inline-block;
+  }
+  .fullList {
+    display: flex;
+    align-items: end;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .fullList .fullListtext {
+    text-align: left;
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    position: absolute;
+    bottom: 108%;
+    left: 47%;
+    margin-left: -80px;
+  }
+  .fullList .fullListtext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .fullList.show {
+    visibility: visible;
+    animation: fadeIn 1s;
+  }
+  img {
+    width: 10%;
+    height: 10%;
+  }
